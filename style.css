@@ -1,0 +1,16 @@
+.container{
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.stock-search-container{
+    display: flex;
+}
+
+.stock-search-input{
+    width: 100%;
+    flex:2;
+}

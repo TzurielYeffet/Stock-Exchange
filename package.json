@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "dotenv": "^17.2.1"
+  },
+  "name": "stock-exchange",
+  "version": "1.0.0",
+  "main": "main.js",
+  "type": "module",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TzurielYeffet/Stock-Exchange.git"
+  },
+  "author": "Tzuriel Yeffet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TzurielYeffet/Stock-Exchange/issues"
+  },
+  "homepage": "https://github.com/TzurielYeffet/Stock-Exchange#readme",
+  "description": ""
+}
