@@ -9,7 +9,9 @@ export async function getListOfStock(){
             throw new Error("Error accessing the server");
         }
         let data = await response.json();
-        return data;
+        console.log(data.slice(0,50));
+        
+        return data.slice(0,50);
     }catch(error){
         alert("There was a problem rcivieng data from the API call")
         console.error("Fetch error: ",error);

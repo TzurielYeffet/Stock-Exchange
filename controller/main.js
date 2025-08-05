@@ -6,22 +6,18 @@ import {
    mockStockListData,
 } from "../model/mockRequestData.js";
 import { showResults } from "../view/stockSearchResults.js";
-import {
-  stockBaseAPIUrl,
-  companyProfileAPI,
-  stockApiKey,
-  stockQuerys,
-  searchStock,
-  listOfStocks,
-} from "../model/apiEndpoints.js";
-import { initMarquee } from "../view/marqueeBar.js";
+import { getListOfStock } from "../model/marqueeData.js";
+import { Marquee } from "../view/Marquee.js";
+
 // import { searchInput } from "../model/stock-search.js";
 const mockCompanyProfileResults = mockCompanyProfile;
 const mockSearchResponse = mockSearchData;
 const mockBulkProfilesData = mockBulkProfileData;
-$(document).ready(() => {
-  initMarquee();
-});
+
+const $marquee = $("#marquee")
+const marquee = new Marquee($marquee);
+const listOfStocks = await getListOfStock();
+marquee.render(listOfStocks)
 
 let debounceTimer;
 $(".stock-search-input").on("input", async function () {
