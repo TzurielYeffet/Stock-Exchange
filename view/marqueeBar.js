@@ -15,7 +15,7 @@ export function initMarquee() {
     let newPrice = item.price + change;
     let isUp = change > 0;
     item.price = newPrice;
-    span += `<span class=" border-l-2 border-l-gray-200">
+    span += `<span class=" border-l-2 border-l-gray-200 ">
                 <span class= "mx-2  inline-block">${item.symbol}</span>
                 <span>${item.price.toFixed(2)}</span>
                 <span class="${isUp ? "text-green-400" : "text-red-400"}"> ${
