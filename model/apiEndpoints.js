@@ -9,3 +9,4 @@ export const stockQuerys = "&limit=10&exchange=NASDAQ&apikey=";
 
 export const companyProfileAPI = "company/profile/";
 export const stockHistory = "https://financialmodelingprep.com/stable/historical-price-eod/light?symbol=" 
+export const listOfStocks = "stock/list?apikey="

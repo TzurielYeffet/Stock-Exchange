@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stock Exchange</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <div class="container w-full max-w-md mx-auto bg-white p-4 rounded-lg shadow-md">
-        <!-- <div class="stock-search"> -->
-            <div class="stock-search-container w-full  mx-auto bg-white p-4 rounded-lg shadow-md">
-            <input class="stock-search-input  w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500" type="text" placeholder="Which stock would you like to find?">
-            <button class="stock-search-btn bg-blue-600 text-white px-4 py-2 rounded-r-lg hover:bg-blue-700 transition-colors duration-200" >Search</button>
-        </div>
-        <div class="search-results ">
-            <ul class="results divide-y divide-gray-200 rounded-lg border border-gray-300 bg-white shadow-sm">
-
-            </ul>
-        </div>
-    <!-- </div> -->
-    
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="overflow-hidden whitespace-nowrap  border-b-1 border-b-gray-300 p-2 shadow-md" id="marquee">
     </div>
 
-
-
-
-
+    <div
+      class="container w-full max-w-md mx-auto bg-white p-4 rounded-lg shadow-md"
+    >
+      <div
+        class="stock-search-container w-full mx-auto bg-white p-4 rounded-lg shadow-md"
+      >
+        <input
+          class="stock-search-input w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          type="text"
+          placeholder="Which stock would you like to find?"
+        />
+        <button
+          class="stock-search-btn bg-blue-600 text-white px-4 py-2 rounded-r-lg hover:bg-blue-700 transition-colors duration-200"
+        >
+          Search
+        </button>
+      </div>
+      <div class="search-results">
+        <ul
+          class="results divide-y divide-gray-200 rounded-lg border border-gray-300 bg-white shadow-sm"
+        ></ul>
+      </div>
+    </div>
 
     <script type="module" src="controller\main.js"></script>
-</body>
+  </body>
 </html>
