@@ -1,21 +1,37 @@
+import {
+  stockApiKey,
+  stockBaseAPIUrl,
+  stockQuerys,
+  searchStock,
+} from "./apiEndpoints.js";
 
-import {stockApiKey,stockBaseAPIUrl,stockQuerys,searchStock} from "./apiEndpoints.js";
+export async function searchInput(input) {
+  console.log(
+    `${stockBaseAPIUrl}` +
+      `${searchStock}` +
+      `${input}` +
+      `${stockQuerys}` +
+      `${stockApiKey}`
+  );
 
-
-
-
-export async function searchInput(input){
-    console.log(`${stockBaseAPIUrl}`+`${searchStock}` +`${input}`+ `${stockQuerys}`+`${stockApiKey}`);
-    
-    const searchURL = `${stockBaseAPIUrl}`+ `${searchStock}` +`${input}`+ `${stockQuerys}`+`${stockApiKey}`
-    
+  const searchURL =
+    `${stockBaseAPIUrl}` +
+    `${searchStock}` +
+    `${input}` +
+    `${stockQuerys}` +
+    `${stockApiKey}`;
+  try {
     const response = await fetch(searchURL);
-    if(!response){
-        alert("There was a problem rcivieng data from the server, Try again")
-        console.log("There was a problem rcivieng data from the API call");
-        return;
-    } 
+    if (!response.ok) {
+      throw new Error("Bad response from server");
+    }
     let data = await response.json();
     console.log(data);
-    
-} 
+    return data;
+  } catch (error) {
+    alert("There was a problem rcivieng data from the server, Try again");
+    console.log("There was a problem rcivieng data from the API call");
+    console.error("Fetch error: ", error);
+    return null;
+  }
+}
