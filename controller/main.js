@@ -44,9 +44,7 @@ $(".stock-search-input").on("input",async function(){
     let results;
     const input = $(this).val().trim().toUpperCase();
     console.log(input);
-    
-    // results = await searchInput(input);
-    
+      
     // showResults(mockSearchResponse); 
     // Remove at when finish dev
     // debounceTimer = setTimeout(()=>{
